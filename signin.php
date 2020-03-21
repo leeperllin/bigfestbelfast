@@ -33,7 +33,7 @@ include("layouts/head.php");
                                     <input class="form-control" type="password" name="mpass" placeholder="Enter password" required />
                                 </div>
                                 <div class="d-flex justify-content-center"><input class="btn btn-primary w-50" type="submit" value="Login" name="requestlogin"></div>
-                                <div class="text-center pt-3"><a href="changepass.php">Forget password </a></div>
+                                <div class="text-center pt-3"><a href="">Forget password </a></div>
                                 <div class="text-primary text-center pt-3">Not user? <a href="register.php"><u>Create an account now</u></a></div>
                             </form>
                         </div>
