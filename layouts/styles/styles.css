@@ -1,0 +1,35 @@
+#signInForm {
+	background: #222 url('../../image/bgSample.jpg') center center no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+#signInFormDiv {
+	position: relative;
+	top: 20%;
+}
+
+#signInFormPaper {
+	width: 35%;
+	border: solid white 1px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+}
+
+#registerForm {
+	background: #222 url('../../image/bgSample.jpg') center center no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+#registerFormDiv {
+	position: relative;
+	top: 12%;
+}
+
+#registerFormPaper {
+	width: 35%;
+	border: solid white 1px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+}
