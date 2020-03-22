@@ -8,6 +8,8 @@ $opwd = $_POST['opwd'];
 $npwd = $_POST['npwd'];
 $cpwd = $_POST['cpwd'];
 
+
+if($npwd==$cpwd){
 $selectquery = "SELECT memail, mpass FROM `2020_member` WHERE memail= '$email' AND mpass='$opwd'";
 
 $selectresult = $conn->query($selectquery);
@@ -19,10 +21,13 @@ if($numrows>0){
     $changepassresult = $conn -> query($changepassquery); 
     
     echo"<p>Password Changed</p>";
-    echo"<p><a href=signin.php>Back to Sign in Page</a></p>";
-    
+echo"<p><a href=signin.php>Back to Sign in Page</a></p>";
+
 }else{
     echo"<p>Wrong email</p>";
+}
+}else{
+    echo"<p>Password does not match</p>";
 }
     
     

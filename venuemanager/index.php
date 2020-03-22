@@ -13,7 +13,7 @@ if(isset($_SESSION['VMid_40245529'])){
 }
 echo "$venuemanager";
 
-$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
               2020_eventcat.etname, 2020_venuemanager.vmname FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
@@ -51,6 +51,7 @@ if (!$readresult) {
         $eventid = $rowread['eid'];
         $eventtitle = $rowread['etitle'];
         $eventvenue = $rowread['evenue'];
+        $eventdes = $rowread['edes'];
         $eventdate = $rowread['edate'];
         $eventtime = $rowread['etime'];
         $eventimage = $rowread['eimage'];
@@ -60,6 +61,7 @@ if (!$readresult) {
         echo"<img src='../image/$eventimage'<br>"; 
         echo"<p>Event Title: $eventtitle </p> ";
         echo"<p>Event Venue: $eventvenue </p> ";
+        echo"<p>Event Description: $eventdes </p> ";
         echo"<p>Event Date: $eventdate </p> ";
         echo"<p>Event Time: $eventtime </p> ";
         echo"<p>Event Category: $eventcategory </p><br> ";

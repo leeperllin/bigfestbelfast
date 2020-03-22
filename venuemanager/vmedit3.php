@@ -11,79 +11,90 @@ if (isset($_SESSION['VMid_40245529'])) {
 }
 echo "$venuemanager";
 
+
 $Eventid2 = $_GET['eventid'];
 
-$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
-              2020_eventcat.etname, 2020_event.ecatid, 2020_venuemanager.vmname FROM 2020_event
-              INNER JOIN 2020_eventcat
-              ON
-              2020_event.ecatid= 2020_eventcat.etid
-              INNER JOIN 2020_venuemanager
-              ON
-              2020_event.evmid= 2020_venuemanager.vmid
-              WHERE 2020_event.eid = '$Eventid2'";
 
-$readresult = $conn->query($readquery);
-
-if (!$readresult) {
-    echo $conn->error;
-}
 ?>
+
+
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-<?php
-while ($rowread = $readresult->fetch_assoc()) {
-
-    $Eventid3 = $rowread['eid'];
-    $Eventcategoryid3 =$rowread['ecatid'];
-    $Eventtitle3 = $rowread['etitle'];
-    $Eventvenue3 = $rowread['evenue'];
-    $Eventdate3 = $rowread['edate'];
-    $Eventtime3 = $rowread['etime'];
-    $Eventimage3 = $rowread['eimage'];
-    $Eventcategoryname3 = $rowread['etname'];
+        
+        <?php
+echo" <form enctype='multipart/form-data' action='vmeditprocess.php' method='POST'>
+     
     
-
-    echo"<form enctype='multipart/form-data' action='vmeditprocess.php' method='POST'>
-       
-
-    <input type='hidden' value='$Eventid3' name='editid' />
-    <br>
-    
+    <input type='hidden' value='$Eventid2' name='vmeditid'>
+          
     <label>Event Title: </label>
-    <input type='text' placeholder='$Eventtitle3' name='Neweventtitle' size='30' required>
+    <input type='text' placeholder='' name='Neweventtitle' id='Neweventtitle' size='30' required>
     <br>
         
     <label>Event Venue: </label>
-    <input type='text' placeholder='$Eventvenue3' name='Neweventvenue' size='30' required>
+    <input type='text' placeholder='' name='Neweventvenue' id='Neweventvenue' size='30' required>
+    <br>
+    
+    <label>Event Description: </label>
+    <input type='text' placeholder='' name='Neweventdescription' id='Neweventdescription'>
     <br>
         
     <label>Event Date: </label>
-    <input type='date' placeholder='$Eventdate3' name='Neweventdate' >
+    <input type='date' placeholder='' name='Neweventdate' id='Neweventdate' >
     <br>
     
     <label>Event time: </label>
-    <input type='time' placeholder='$Eventtime3' name='Neweventtime' >
+    <input type='time' placeholder='' name='Neweventtime' id='Neweventtime' >
     <br>
     
-    <label>Event Category: </label>
-    <option value='$Eventcategoryid3'>$Eventcategoryname3</option>
-    <br>
+    <Label>Event Category:</label>
+    <select name='Newcatevent' required/>";
     
-    <p>Event images: <<img src='../image/$Eventimage3'</p>
-    <input name='Neweventimage' type='file'>
+
+//for showing the option select
+
+$showoptionquery = "SELECT * FROM 2020_eventcat ORDER BY etname ";
+$showoptionresult = $conn->query($showoptionquery);
+
+echo"<option value=''>Choose Category</option> ";
+
+while($row = $showoptionresult->fetch_assoc()){
+    $catname = $row['etname'];
+    $catid = $row['etid'];
+    
+    echo"<option value='$catid'>$catname</option>";
+}
+
+    echo"<label>Event images: </label>
+    <input name='Neweventimage' id='Neweventimage' type='file'>
     
     <input type='submit' value='Edit Event'  name='requesteditevent' >
     <br>
-      
- 
-        
+    
 </form>";
-}
 ?>
-    </body>
+
+</head>
 </html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

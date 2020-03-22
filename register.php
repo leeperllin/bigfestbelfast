@@ -1,9 +1,7 @@
 <?php
 session_start();
 include("showerrors.php");
-if (!isset($_SESSION['username_40245529'])) {
-    header("Location: signin.php");
-}
+
 ?>
 <html>
 <?php
@@ -46,19 +44,19 @@ include("layouts/head.php");
                                 <!-- SECURITY QUESTION -->
                                 <div class="form-group">
                                     <label class="text-primary">Security Question:</label>
-                                    <select class="form-control" name="">
-                                        <option value="What is your dog's name?">What is your dog's name?</option>
-                                        <option value="What were the last four digits of your childhood telephone number?">What were the last four digits of your childhood telephone number?</option>
+                                    <select class="form-control" name="mnewquestion">
+                                        <option value="What is your dog name?">What is your dog name?</option>
+                                        <option value="What were the last four digits of your telephone number?">What were the last four digits of your telephone number?</option>
                                         <option value="What primary school did you attend?">What primary school did you attend?</option>
                                     </select>
                                 </div>
                                 <!-- ANSWER -->
                                 <div class="form-group">
                                     <label class="text-primary">Answer:</label>
-                                    <input class="form-control" type="text" name="" placeholder="Enter your answer" required />
+                                    <input class="form-control" type="text" name="mnewanswer" placeholder="Enter your answer" required />
                                 </div>
                                 <div class="d-flex justify-content-center"><input class="btn btn-primary w-50" type="submit" value="Register" name="registeracc"></div>
-                                <!-- <div class="text-center pt-3"><a href="changepass.php">Forget password </a></div> -->
+                                
                                 <div class="text-primary text-center pt-3">Already have an account? <a href="signin.php" class="text-primary"><u>Login here</u></a></div>
                             </form>
                         </div>
