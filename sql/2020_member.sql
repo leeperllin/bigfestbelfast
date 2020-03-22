@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2020 at 02:04 AM
+-- Generation Time: Mar 22, 2020 at 03:10 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -33,23 +33,24 @@ CREATE TABLE `2020_member` (
   `mfirstname` varchar(255) NOT NULL,
   `mlastname` varchar(255) NOT NULL,
   `memail` varchar(255) NOT NULL,
-  `mpass` varchar(255) NOT NULL
+  `mpass` varchar(255) NOT NULL,
+  `mquestion` varchar(255) NOT NULL,
+  `manswer` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `2020_member`
 --
 
-INSERT INTO `2020_member` (`mid`, `mfirstname`, `mlastname`, `memail`, `mpass`) VALUES
-(1001, 'Perl Lin 0000', 'Lee', 'leeperllin3029@hotmail.com', 'happy3029'),
-(1002, 'Li', 'Qin', 'liqin3029@hotmail.com', '123456'),
-(1003, 'Desmond', 'Sim', 'desmondsim@gmail.com', '123456'),
-(1004, '', '', '', ''),
-(1005, 'Desmond1234', 'Sim', 'desmondsim@gmail.com', '123456'),
-(1006, 'Desmond', 'Sim 000', 'desmondsim123@gmail.com', '123456'),
-(1007, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', 'happy3029'),
-(1008, 'Desmond', 'Sim', 'desmondsim@gmail.com', '123456'),
-(1009, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', 'happy3029');
+INSERT INTO `2020_member` (`mid`, `mfirstname`, `mlastname`, `memail`, `mpass`, `mquestion`, `manswer`) VALUES
+(1001, 'Perl Lin ', 'Lee', 'leeperllin3029@hotmail.com', 'happy3029', 'What is your dog name?', 'Lucky'),
+(1002, 'Li', 'Qin', 'liqin3029@hotmail.com', '123456', 'What were the last four digits of your telephone number?', '0000'),
+(1003, 'Desmond', 'Sim', 'desmondsim@gmail.com', '123456', 'What primary school did you attend?', 'Queens Belfast'),
+(1010, 'Perl Lin', 'Lee', 'leeperllin1999@hotmail.com', '1234567', 'What is your dog name?', 'pussy'),
+(1011, 'Xinrou', 'Lee', 'leexinrou56@gmail.com', '19904201994412', 'What were the last four digits of your telephone number?', '1313'),
+(1012, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', '01010101', 'What is your dog name?', 'Pussy'),
+(1013, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', '12345', 'What is your dog name?', 'Pussy'),
+(1014, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', '12345', 'What is your dog name?', 'Pussy');
 
 --
 -- Indexes for dumped tables
@@ -69,7 +70,7 @@ ALTER TABLE `2020_member`
 -- AUTO_INCREMENT for table `2020_member`
 --
 ALTER TABLE `2020_member`
-  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1010;
+  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1015;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

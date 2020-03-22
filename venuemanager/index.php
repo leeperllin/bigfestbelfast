@@ -3,15 +3,13 @@ session_start();
 include("../showerrors.php");
 include("../conn.php");
 
-if(!isset($_SESSION['VMname_40245529'])){
+if (!isset($_SESSION['VMname_40245529'])) {
     header("Location: vmsignin.php");
-    
 }
-if(isset($_SESSION['VMid_40245529'])){   
+if (isset($_SESSION['VMid_40245529'])) {
     $venuemanager = $_SESSION['VMid_40245529'];
-    
 }
-echo "$venuemanager";
+
 
 $readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
               2020_eventcat.etname, 2020_venuemanager.vmname FROM 2020_event
@@ -22,8 +20,8 @@ $readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_
               ON
               2020_event.evmid= 2020_venuemanager.vmid
               WHERE 2020_venuemanager.vmid = '$venuemanager'";
-              
-                
+
+
 $readresult = $conn->query($readquery);
 
 if (!$readresult) {
@@ -34,42 +32,53 @@ if (!$readresult) {
 
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>   
-        
-        <?php
-        echo"<a href=index.php>My Events</a><br>";
-        echo"<a href=vmedit.php>Edit Events</a><br>";
-        echo"<a href=vmupload.php>Upload Events</a><br>";
-        echo"<a href=vmdelete.php>Delete Events</a><br>";
-        
-        while ($rowread = $readresult->fetch_assoc()) {
+<?php
+include("../layouts/venuemanager/head.php");
+?>
 
-        $eventid = $rowread['eid'];
-        $eventtitle = $rowread['etitle'];
-        $eventvenue = $rowread['evenue'];
-        $eventdes = $rowread['edes'];
-        $eventdate = $rowread['edate'];
-        $eventtime = $rowread['etime'];
-        $eventimage = $rowread['eimage'];
-        $eventcategory = $rowread['etname'];
-        $venuemanagername = $rowread['vmname'];
+<body>
+    <?php
+    include("../venuemanager/components/navbar.php")
+    ?>
+    <div class="container">
+        <div class="row">
+            <?php
+            while ($rowread = $readresult->fetch_assoc()) {
 
-        echo"<img src='../image/$eventimage'<br>"; 
-        echo"<p>Event Title: $eventtitle </p> ";
-        echo"<p>Event Venue: $eventvenue </p> ";
-        echo"<p>Event Description: $eventdes </p> ";
-        echo"<p>Event Date: $eventdate </p> ";
-        echo"<p>Event Time: $eventtime </p> ";
-        echo"<p>Event Category: $eventcategory </p><br> ";
+                $eventid = $rowread['eid'];
+                $eventtitle = $rowread['etitle'];
+                $eventvenue = $rowread['evenue'];
+                $eventdes = $rowread['edes'];
+                $eventdate = $rowread['edate'];
+                $eventtime = $rowread['etime'];
+                $eventimage = $rowread['eimage'];
+                $eventcategory = $rowread['etname'];
+                $venuemanagername = $rowread['vmname'];
+            ?>
+                <div class="col-4 pt-4">
+                    <div class="card border-info">
+                        <div class="text-center pt-3">
+                            <h5 class="card-title"><?php echo $eventtitle ?></h5>
+                        </div>
+                        <img class="card-img-top" src="<?php echo "../image/$eventimage" ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                            <p class="card-text">Event Title: <b><?php echo $eventtitle ?></b></p>
+                            <p class="card-text">Event Venue: <b><?php echo $eventvenue ?></b></p>
+                            <p class="card-text">Event Description:</p>
+                            <p><b><?php echo $eventdes ?></b></p>
+                            <p class="card-text">Event Date: <b><?php echo $eventdate ?></b></p>
+                            <p class="card-text">Event Time: <b><?php echo $eventtime ?></b></p>
+                            <p class="card-text">Event Category: <b><?php echo $eventcategory ?></b></p>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <?php
+    include("../layouts/venuemanager/bodyjs.php");
+    ?>
+</body>
 
-    
-    }
-          
-        
-        ?>
-    </body>
 </html>

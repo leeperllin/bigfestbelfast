@@ -13,7 +13,7 @@ include("layouts/head.php");
         <div id="registerFormDiv">
             <div class="d-flex justify-content-center">
                 <div id="registerFormPaper">
-                    <div class="d-flex justify-content-center pt-3">
+                    <div class="d-flex justify-content-center text-center pt-3">
                         <h1 class="text-primary pb-4">Create a new account</h1>
                     </div>
                     <div class="d-flex justify-content-center">

@@ -1,0 +1,18 @@
+#vmSignInForm {
+	background: #222 url('../../../image/bgSample.jpg') center center no-repeat;
+	background-size: cover;
+	height: 100%;
+	overflow: auto;
+}
+
+#vmSignInFormDiv {
+	position: relative;
+	top: 10%;
+}
+
+#vmSignInFormPaper {
+	width: 35%;
+	border: solid white 1px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+}
