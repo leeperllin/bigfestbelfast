@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 22, 2020 at 04:14 AM
+-- Generation Time: Mar 23, 2020 at 12:34 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -47,7 +47,7 @@ CREATE TABLE `2020_event` (
 INSERT INTO `2020_event` (`eid`, `etitle`, `evenue`, `edes`, `edate`, `etime`, `eimage`, `ecatid`, `evmid`) VALUES
 (100, 'The Fire Boys', 'Belfast Concert Hall', 'Banging hard-house, hard-techno & trance from the party pumpers residents. Flat out rave hoover madness.\r\n\r\nFull visual production from the Visual Spectrum crew.\r\n\r\nBanging Party Pumpers decor\r\n\r\nLineup:\r\n\r\nChunkers & Decky\r\n\r\nTurlo & Ryno\r\n\r\nScath', '2020-03-31', '16:00:00', '01.jpeg', 3, 102),
 (101, 'The Fire Girls', 'London Opera Music House', 'Both Cash and Elvis started their career under Sun Records in the 50s and went on to forge long and immense careers for themselves amassing an unprecedented fanbase between them all over the globe with their mixture of rock n roll, gospel, country, blues songs.', '2020-04-02', '15:00:00', '02.jpeg', 2, 101),
-(102, 'The Cold Boys', 'Malaysia Opera Music House', 'Phil Kieran presents Life Cycles 002  A Love From Outer Space Featuring Andrew Weatherall and Sean Johnston makes a welcome return to Belfast on the Saturday the 20th of June.', '2020-04-17', '20:00:00', '03.jpeg', 3, 102),
+(102, 'The Fire Water', 'Belfast Concert Hall', 'Hello world', '1111-11-11', '11:11:00', '03.jpeg', 2, 102),
 (103, 'The Cold Girls', 'USA Opera Music House', 'Live Free Bookings in association with Shizznigh Promotions & Rackus Rattus Promo present:  Michale Graves (Ex Misfits Lead Singer) performing “American Psycho” & “Famous Monsters” albums in full  Friday 5th June  Limelight 2 Belfast  Doors 6:30pm  £20 tickets at eventbrite.com or £25 OTD', '2020-05-07', '16:00:00', '04.jpeg', 2, 103),
 (104, 'The Impossible Man', 'Dublin House', 'The Bjorn Identity exceed all expectations as a sensational Abba tribute band! This is a truly stunning show with replica costumes, vocal likeness and Abba style choreography. The Björn Identity® with their Swedish humour & professionalism are committed to re-creating the music of their tribute idols ', '2020-05-17', '18:00:00', '05.jpeg', 1, 103),
 (105, 'The Superman', 'London City Hall', 'A night dedicated to worshipping at the altar of Taylor Swift: non-stop Swifty all night: deep cuts, extended mixes, fan favourites and all the hits.  Do you have a Blank Space in your diary for 15 May? Then this night is Taylor-made for you! Join fellow fans in a celebration of the genius of the Swift - because she will never go out of Style.', '2020-04-22', '19:00:00', '06.jpeg', 3, 101),
@@ -76,7 +76,7 @@ ALTER TABLE `2020_event`
 -- AUTO_INCREMENT for table `2020_event`
 --
 ALTER TABLE `2020_event`
-  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- Constraints for dumped tables

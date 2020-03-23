@@ -31,8 +31,11 @@ include("../layouts/venuemanager/head.php");
 ?>
 
 <body>
-<?php include("../venuemanager/components/navbar.php") ?>
-    <div class="text-center pt-5"><h1 class="display-2 text-info">Delete Events</h1></div>
+    <?php include("../venuemanager/components/navbar.php") ?>
+    <div id="vmDeleteDiv">
+        <div class="text-center pt-5">
+            <h1 class="display-2 text-info">Delete Events</h1>
+        </div>
         <div class="d-flex h-50 align-items-center justify-content-center">
             <div class="container text-center">
                 <div class="row">
@@ -72,10 +75,10 @@ include("../layouts/venuemanager/head.php");
                 </div>
             </div>
         </div>
-
-
-
-
+    </div>
+    <?php
+    include("../venuemanager/components/footer.php")
+    ?>
     <?php
     include("../layouts/venuemanager/bodyjs.php");
     ?>

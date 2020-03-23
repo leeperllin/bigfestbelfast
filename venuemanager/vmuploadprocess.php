@@ -10,11 +10,15 @@ if (isset($_SESSION['VMid_40245529'])) {
     $venuemanager = $_SESSION['VMid_40245529'];
 }
 
-echo "$venuemanager";
+$checkquery = "SELECT eimage FROM `2020_event` ";
 
-if(isset($_POST["uploadevent"])){
-    
-//$upvmid = $_POST["venuemanagerid"];
+$checkresult = $conn->query($checkquery);
+
+if (!$checkresult) {
+    echo $conn->error;
+}
+
+if(isset($_POST["uploadevent"])){   
 $upeventtitle = $_POST["newetitle"];
 $upeventvenue = $_POST["newevenue"];
 $upeventdes = $_POST["newedes"];
@@ -25,28 +29,49 @@ $upeventimage = $_FILES["neweimage"]['name'];
 $upeventimagetemp= $_FILES['neweimage']['tmp_name'];
 
 
-
-if (file_exists("../image/$upeventimage")) {
-    echo "Sorry, file already exists.";     
-}  
-
-move_uploaded_file($upeventimagetemp, "../image/$upeventimage");
- 
-
-$uploadquery = "INSERT INTO 2020_event (evmid, etitle,evenue,edes,edate,etime,ecatid,eimage) VALUES ('$venuemanager', '$upeventtitle','$upeventvenue','$upeventdes','$upeventdate','$upeventtime','$upeventcat', '$upeventimage')";
+while ($rowread = $checkresult->fetch_assoc()) {
+        $eventimagepath = $rowread['eimage'];
         
-$uploadresult = $conn -> query($uploadquery);
-
-if(!$uploadresult) {  
-echo $conn->error;
-echo"$uploadresult";
-echo"$uploadquery";
-} echo"Upload Sucessfully!";
-  echo"<a href='index.php'>Back to Home Page</a>";
-
 }
 
-?>   
+if($eventimagepath!==$upeventimage){
+    
+ move_uploaded_file($upeventimagetemp, "../image/$upeventimage");   
+ $uploadquery = "INSERT INTO 2020_event (evmid, etitle,evenue,edes,edate,etime,ecatid,eimage) VALUES ('$venuemanager', '$upeventtitle','$upeventvenue','$upeventdes','$upeventdate','$upeventtime','$upeventcat', '$upeventimage')";
+ $uploadresult = $conn -> query($uploadquery);  
+if(!$uploadresult) {  
+echo $conn->error;
+}else{
+    echo"Upload sucessfully";
+    echo"<a href='index.php'>Back to Home Page</a>";
+} 
+}else{
+    echo"Image already exist--Upload Failed!";
+    
+} 
+}
+
+?>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+   
+
+  
 
 
 

@@ -3,22 +3,34 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmsigninprocess.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/image/bgSample.jpg</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit2.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/image/09.jpeg</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmupload.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/image/01.jpeg</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/README.md</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/image/06.jpeg</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmchangepass.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmchangepassprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/eventcategory.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/register.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/forgetpassprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmsignin.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/image/05.jpeg</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit3.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/image/08.jpeg</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/changepassprocess.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmeditprocess.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/forgetpass.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmuploadprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/changepass.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/meditdetailsprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/supportpage/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit2.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmupload.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/signin.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/mydetails.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/signinprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmdelete3.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit3.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/changepassprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/components/navbar.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmeditprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/registerprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/eventdetails.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/forgetpass.php</file>
         </group>
     </open-files>
 </project-private>

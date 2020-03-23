@@ -55,27 +55,30 @@ include("../layouts/venuemanager/head.php");
                 $eventcategory = $rowread['etname'];
                 $venuemanagername = $rowread['vmname'];
             ?>
-                <div class="col-4 pt-4">
+                <div class="col-4 p-3">
                     <div class="card border-info">
-                        <div class="text-center pt-3">
+                        <div class="text-center p-2">
                             <h5 class="card-title"><?php echo $eventtitle ?></h5>
                         </div>
-                        <img class="card-img-top" src="<?php echo "../image/$eventimage" ?>" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo "../image/$eventimage" ?>" alt="Card image cap" height="200px" width="200px">
                         <div class="card-body">
                             <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
                             <p class="card-text">Event Title: <b><?php echo $eventtitle ?></b></p>
                             <p class="card-text">Event Venue: <b><?php echo $eventvenue ?></b></p>
-                            <p class="card-text">Event Description:</p>
-                            <p><b><?php echo $eventdes ?></b></p>
                             <p class="card-text">Event Date: <b><?php echo $eventdate ?></b></p>
                             <p class="card-text">Event Time: <b><?php echo $eventtime ?></b></p>
                             <p class="card-text">Event Category: <b><?php echo $eventcategory ?></b></p>
+                            <p class="card-text mb-0">Event Description:</p>
+                            <p><b><?php echo $eventdes ?></b></p>
                         </div>
                     </div>
                 </div>
             <?php } ?>
         </div>
     </div>
+    <?php
+    include("../venuemanager/components/footer.php")
+    ?>
     <?php
     include("../layouts/venuemanager/bodyjs.php");
     ?>

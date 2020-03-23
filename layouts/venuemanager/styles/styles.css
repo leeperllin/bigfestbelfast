@@ -1,18 +1,98 @@
+#vmNav {
+	height: 7%;
+}
+
+#vmNavDropdown:hover #vmNavDropdownMenu {
+	display: block;
+}
+
+#vmFooter {
+	height: 5%;
+	opacity: 0.8;
+}
+
+
+#vmBgVideoDiv {
+	position: relative;
+	background-color: black;
+	height: 100%;
+	min-height: 25rem;
+	width: 100%;
+	overflow: hidden;
+}
+
+#vmBgVideo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+#vmBgVideoContainer {
+	position: relative;
+	z-index: 2;
+}
+
+#vmBgVideoOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 1;
+}
+
 #vmSignInForm {
-	background: #222 url('../../../image/bgSample.jpg') center center no-repeat;
-	background-size: cover;
+	/* background: #222 url('../../../image/bgSample.jpg') center center no-repeat;
+	background-size: cover; */
 	height: 100%;
 	overflow: auto;
 }
 
-#vmSignInFormDiv {
-	position: relative;
-	top: 10%;
+#vmSignInFormPaper {
+	width: 65%;
+	border: solid white 1px;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 10px;
 }
 
-#vmSignInFormPaper {
-	width: 35%;
+#vmUploadForm {
+	/* background: #222 url('../../../image/vmBgSample.jpg') center center no-repeat; */
+	background: #eeeeee;
+	height: 88%;
+	overflow: auto;
+}
+
+#vmUploadFormDiv {
+	position: relative;
+	top: 1%;
+}
+
+#vmUploadFormPaper {
+	width: 60%;
 	border: solid white 1px;
 	background-color: rgba(255, 255, 255, 0.7);
 	border-radius: 10px;
+}
+
+#vmEditDiv {
+	height: 88%;
+}
+
+#vmEdit2Div {
+	height: 88%;
+}
+
+#vmDeleteDiv {
+	height: 88%;
 }
