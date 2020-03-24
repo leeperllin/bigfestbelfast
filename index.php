@@ -43,7 +43,7 @@ include("layouts/head.php");
         echo"<a href='eventpage/eventcategory.php?eventcategory=$catid'>$catname</a>";
     }
     ?>
-    <a href="#">Venue</a>
+    <a href="venuepage/index.php">Venue</a>
     <a href="supportpage/index.php">Support Us</a>
     <?php
     while ($rowread = $readresult->fetch_assoc()) {
@@ -57,6 +57,7 @@ include("layouts/head.php");
     
     if($member!=="guest"){
     echo "<a href='mydetails.php?memberid=$rowid'>My Profile</a>";
+    echo "<a href='myinbox.php'>Inbox</a>";
     echo "<a href='changepass.php'>Change Password</a>";
     echo "<a href='logout.php'>Logout</a>";
     

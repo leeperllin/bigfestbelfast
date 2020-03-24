@@ -11,7 +11,7 @@ if (isset($_SESSION['VMid_40245529'])) {
 }
 
 
-$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.eaddress, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
               2020_eventcat.etname, 2020_venuemanager.vmname FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
@@ -47,7 +47,7 @@ include("../layouts/venuemanager/head.php");
 
                 $eventid = $rowread['eid'];
                 $eventtitle = $rowread['etitle'];
-                $eventvenue = $rowread['evenue'];
+                $eventaddress = $rowread['eaddress'];
                 $eventdes = $rowread['edes'];
                 $eventdate = $rowread['edate'];
                 $eventtime = $rowread['etime'];
@@ -64,7 +64,7 @@ include("../layouts/venuemanager/head.php");
                         <div class="card-body">
                             <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
                             <p class="card-text">Event Title: <b><?php echo $eventtitle ?></b></p>
-                            <p class="card-text">Event Venue: <b><?php echo $eventvenue ?></b></p>
+                            <p class="card-text">Event Address: <b><?php echo $eventaddress ?></b></p>
                             <p class="card-text">Event Date: <b><?php echo $eventdate ?></b></p>
                             <p class="card-text">Event Time: <b><?php echo $eventtime ?></b></p>
                             <p class="card-text">Event Category: <b><?php echo $eventcategory ?></b></p>

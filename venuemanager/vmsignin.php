@@ -12,7 +12,7 @@ include("../layouts/venuemanager/head.php");
     <div id="vmBgVideoDiv">
         <div id="vmBgVideoOverlay" class="overlay"></div>
         <video id="vmBgVideo" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="../image/vmBgVideo.mp4" type="video/mp4">
+            <source src="https://static.videezy.com/system/resources/previews/000/021/205/original/Black-And-Wight-Unfocused-Concert.mp4" type="video/mp4">
         </video>
         <div id="vmBgVideoContainer" class="container h-100">
             <div id="vmSignInForm">

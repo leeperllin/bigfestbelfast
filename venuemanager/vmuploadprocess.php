@@ -20,7 +20,7 @@ if (!$checkresult) {
 
 if(isset($_POST["uploadevent"])){   
 $upeventtitle = $_POST["newetitle"];
-$upeventvenue = $_POST["newevenue"];
+$upeventvenue = $_POST["neweaddress"];
 $upeventdes = $_POST["newedes"];
 $upeventdate = $_POST["newedate"];
 $upeventtime = $_POST["newetime"];
@@ -37,7 +37,7 @@ while ($rowread = $checkresult->fetch_assoc()) {
 if($eventimagepath!==$upeventimage){
     
  move_uploaded_file($upeventimagetemp, "../image/$upeventimage");   
- $uploadquery = "INSERT INTO 2020_event (evmid, etitle,evenue,edes,edate,etime,ecatid,eimage) VALUES ('$venuemanager', '$upeventtitle','$upeventvenue','$upeventdes','$upeventdate','$upeventtime','$upeventcat', '$upeventimage')";
+ $uploadquery = "INSERT INTO 2020_event (evmid, etitle,eaddress,edes,edate,etime,ecatid,eimage) VALUES ('$venuemanager', '$upeventtitle','$upeventvenue','$upeventdes','$upeventdate','$upeventtime','$upeventcat', '$upeventimage')";
  $uploadresult = $conn -> query($uploadquery);  
 if(!$uploadresult) {  
 echo $conn->error;

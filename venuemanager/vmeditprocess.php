@@ -21,7 +21,7 @@ if (!$checkresult) {
 if(isset($_POST["requesteditevent"])){ 
 $VMeditid = $_POST["vmeditid"];
 $editeventtitle = $_POST["Neweventtitle"];
-$editeventvenue = $_POST["Neweventvenue"];
+$editeventaddress = $_POST["Neweventaddress"];
 $editeventdes = $_POST["Neweventdescription"];
 $editeventdate = $_POST["Neweventdate"];
 $editeventtime = $_POST["Neweventtime"];
@@ -37,7 +37,7 @@ while ($rowread = $checkresult->fetch_assoc()) {
 if($eventimagepath!==$editeventimage){
 move_uploaded_file($editeventimagetemp, "../image/$editeventimage");
  
-$editquery = "UPDATE 2020_event SET etitle='$editeventtitle', evenue='$editeventvenue', edes='$editeventdes',
+$editquery = "UPDATE 2020_event SET etitle='$editeventtitle', eaddress='$editeventaddress', edes='$editeventdes',
               edate='$editeventdate', etime='$editeventtime', ecatid='$editcatevent', eimage='$editeventimage' WHERE eid='$VMeditid'";
 
 $editresult = $conn -> query($editquery);

@@ -3,7 +3,7 @@ session_start();
 include("../showerrors.php");
 include("../conn.php");
 //call event information
-$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.eaddress, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
               2020_eventcat.etname, 2020_venuemanager.vmname FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
@@ -41,6 +41,7 @@ if (!$readresult) {
     while ($row = $showoptionresult->fetch_assoc()) {
         $catname = $row['etname'];
         $catid = $row['etid'];
+        
         echo"<a href='eventcategory.php?eventcategory=$catid'>$catname</a>";
     }
     ?>
@@ -54,7 +55,7 @@ if (!$readresult) {
 
         $Eeventid = $rowread['eid'];
         $Eeventtitle = $rowread['etitle'];
-        $Eeventvenue = $rowread['evenue'];
+        $Eeventaddress = $rowread['eaddress'];
         
         $Eeventdate = $rowread['edate'];
         $Eeventtime = $rowread['etime'];
@@ -64,7 +65,7 @@ if (!$readresult) {
 
         echo"<img src='../image/$Eeventimage'<br>"; 
         echo"<p>Event Title: $Eeventtitle </p> ";
-        echo"<p>Event Venue: $Eeventvenue </p> ";
+        echo"<p>Event Address: $Eeventaddress </p> ";
         echo"<p>Event Date: $Eeventdate </p> ";
         echo"<p>Event Time: $Eeventtime </p> ";
         echo"<p>Event Category: $Eeventcategory </p> ";

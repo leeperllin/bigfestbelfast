@@ -37,8 +37,8 @@ include("../layouts/venuemanager/head.php");
                                         <input class="form-control" type='text' name='newetitle' id='newetitle' required />
                                     </div>
                                     <div class="form-group">
-                                        <label class="text-info"><b>Event Venue:</b></label>
-                                        <input class="form-control" type='text' name='newevenue' id='newevenue' required />
+                                        <label class="text-info"><b>Event Address:</b></label>
+                                        <input class="form-control" type='text' name='neweaddress' id='neweaddress' required />
                                     </div>
                                     <div class="form-group">
                                         <label class="text-info"><b>Event Description:</b></label>

@@ -14,7 +14,7 @@ echo "$venuemanager";
 
 $Eventid2 = $_GET['eventid'];
 
-$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.evenue, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.eaddress, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
               2020_eventcat.etname, 2020_venuemanager.vmname FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
@@ -48,7 +48,7 @@ echo" <form enctype='multipart/form-data' action='vmeditprocess.php' method='POS
 //for value part
     while($row2 = $readresult->fetch_assoc()){
     $valuetitle = $row2['etitle'];
-    $valuevenue = $row2['evenue'];
+    $valueaddress = $row2['eaddress'];
     $valuedes = $row2['edes'];
     $valuedate = $row2['edate'];
     $valuetime = $row2['etime'];   
@@ -58,8 +58,8 @@ echo" <label>Event Title: </label>
     <input type='text' value=$valuetitle name='Neweventtitle' id='Neweventtitle' size='30' required>
     <br>
         
-    <label>Event Venue: </label>
-    <input type='text' value='$valuevenue' name='Neweventvenue' id='Neweventvenue' size='30' required>
+    <label>Event Address: </label>
+    <input type='text' value='$valueaddress' name='Neweventaddress' id='Neweventaddress' size='30' required>
     <br>
     
     <label>Event Description: </label>

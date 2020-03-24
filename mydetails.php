@@ -22,6 +22,12 @@ if (!$readresult) {
     <head>
 
     <h1>My details page</h1>
+    
+    <a href='mydetails.php'>My details </a>
+    <a href='mybooking.php'>My Booking </a>
+    <a href='myreview.php'>My Review </a>
+    
+    
     <?php
     while ($rowread = $readresult->fetch_assoc()) {
 
