@@ -12,7 +12,7 @@ include("layouts/head.php");
     <div id="bgVideoDiv">
         <div id="bgVideoOverlay" class="overlay"></div>
         <video id="bgVideo" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="image/bgVideo.mp4" type="video/mp4">
+            <source src="https://cdn.videvo.net/videvo_files/video/free/2020-03/small_watermarked/200107_02_String%20Quartet_4k_018_preview.webm" type="video/mp4">
         </video>
         <div id="bgVideoContainer" class="container h-100">
             <div id="registerForm">

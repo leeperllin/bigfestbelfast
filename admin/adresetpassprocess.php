@@ -15,25 +15,35 @@ $Resetmember3 = $_GET['resetmember3'];
 $Resetpass = "000000";
 
 $resetpassquery = "UPDATE 2020_member set mpass='$Resetpass' WHERE mid='$Resetmember3'";
- 
-$resetresult = $conn -> query($resetpassquery);
 
- if (!$resetresult ) {
-        echo $conn->error;
+$resetresult = $conn->query($resetpassquery);
+
+if (!$resetresult) {
+    echo $conn->error;
 }
 
 ?>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-      echo "The member password has been reset to $Resetpass successfully!";
-      
-      
-        ?>
-    </body>
-</html>
+<?php
+include("../layouts/admin/head.php")
+?>
 
+<body>
+    <?php include("../admin/components/navbar.php") ?>
+    <div class="container justify-content-center">
+        <div class="d-flex justify-content-center p-5">
+            <h5 class="text-primary">The member password has been reset to <?php echo $Resetpass ?> successfully!</h5>
+        </div>
+        <div class="d-flex justify-content-center p-5">
+            <a href="index.php">
+                <div class="btn btn-primary">Back to User Details</div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <?php include("../layouts/admin/bodyjs.php") ?>
+</body>
+
+</html>

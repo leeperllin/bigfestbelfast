@@ -11,7 +11,6 @@
 	opacity: 0.8;
 }
 
-
 #vmBgVideoDiv {
 	position: relative;
 	background-color: black;
@@ -53,8 +52,6 @@
 }
 
 #vmSignInForm {
-	/* background: #222 url('../../../image/bgSample.jpg') center center no-repeat;
-	background-size: cover; */
 	height: 100%;
 	overflow: auto;
 }
@@ -67,15 +64,9 @@
 }
 
 #vmUploadForm {
-	/* background: #222 url('../../../image/vmBgSample.jpg') center center no-repeat; */
 	background: #eeeeee;
-	height: 88%;
+	height: 100%;
 	overflow: auto;
-}
-
-#vmUploadFormDiv {
-	position: relative;
-	top: 1%;
 }
 
 #vmUploadFormPaper {
@@ -93,6 +84,41 @@
 	height: 88%;
 }
 
+#vmEdit3Form {
+	background: #eeeeee;
+	height: 100%;
+	overflow: auto;
+}
+
+#vmEdit3FormDiv {
+	position: relative;
+	top: 2%;
+}
+
+#vmEdit3FormPaper {
+	width: 60%;
+	border: solid white 1px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+}
+
 #vmDeleteDiv {
 	height: 88%;
+}
+
+#vmDelete2Div {
+	height: 88%;
+}
+
+#vmChangePassForm {
+	background: #eeeeee;
+	height: 88%;
+	overflow: auto;
+}
+
+#vmChangePassFormPaper {
+	width: 60%;
+	border: solid white 1px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
 }

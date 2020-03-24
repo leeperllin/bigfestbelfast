@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2020 at 01:39 AM
+-- Generation Time: Mar 24, 2020 at 05:57 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -30,17 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `2020_venuecat` (
   `vid` int(11) NOT NULL,
-  `vname` varchar(255) NOT NULL
+  `vname` varchar(255) NOT NULL,
+  `vaddress` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `2020_venuecat`
 --
 
-INSERT INTO `2020_venuecat` (`vid`, `vname`) VALUES
-(10, 'Belfast City Hall'),
-(11, 'London City Hall'),
-(12, 'Manchester City Hall');
+INSERT INTO `2020_venuecat` (`vid`, `vname`, `vaddress`) VALUES
+(10, 'Belfast City Hall', 'Donegall Square Belfast BT1 5GS'),
+(11, 'London City Hall', 'The Queens Walk London SE1 2AA'),
+(12, 'Manchester City Hall', 'Mount Street Entrance Albert Square Manchester M2 5DB');
 
 --
 -- Indexes for dumped tables

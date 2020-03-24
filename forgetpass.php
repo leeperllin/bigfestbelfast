@@ -12,7 +12,7 @@ include("layouts/head.php");
     <div id="bgVideoDiv">
         <div id="bgVideoOverlay" class="overlay"></div>
         <video id="bgVideo" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="image/bgVideo.mp4" type="video/mp4">
+            <source src="https://cdn.videvo.net/videvo_files/video/free/2020-03/small_watermarked/200107_02_String%20Quartet_4k_018_preview.webm" type="video/mp4">
         </video>
         <div id="bgVideoContainer" class="container h-100">
             <div id="forgetPassForm">
@@ -51,8 +51,8 @@ include("layouts/head.php");
                                         </div>
                                         <div class="d-flex justify-content-center"><input class="btn btn-primary w-50" type="submit" value="Change Password" name="changeforgetpassword"></div>
 
-                                        <div class="text-primary text-center pt-3">Remember your password? <a href="signin.php" class="text-primary"><u>Login here!</u></a></div>
-                                        <div class="text-primary text-center pt-3">Lazy to reset password? <a href="register.php" class="text-primary"><u>Register a new account here!</u></a></div>
+                                        <div class="text-primary text-center pt-3"><a href="signin.php" class="text-primary"><u>Back to Sign In</u></a></div>
+                                        <div class="text-primary text-center pt-3"><a href="register.php" class="text-primary"><u>Register a new account</u></a></div>
                                     </form>
                                 </div>
                             </div>

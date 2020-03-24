@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2020 at 01:39 AM
+-- Generation Time: Mar 24, 2020 at 05:57 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -40,14 +40,15 @@ CREATE TABLE `2020_reviews` (
 --
 
 INSERT INTO `2020_reviews` (`rid`, `comment`, `eventid`, `memberid`) VALUES
-(1, 'This event so very nice', 101, 1001),
 (2, 'I really like the music', 102, 1002),
 (3, 'I love United Kingdom', 103, 1003),
 (4, 'I think another event is better', 104, 1002),
 (6, 'I like the environment so much ', 107, 1002),
 (7, 'This is amazing, OMG!', 108, 1002),
 (8, 'YES I LOVE IT LOVE IT ', 100, 1003),
-(9, 'Talking to the moon', 106, 1003);
+(9, 'Talking to the moon', 106, 1003),
+(10, 'corona virus', 100, 1001),
+(11, 'corona virus', 100, 1001);
 
 --
 -- Indexes for dumped tables
@@ -69,7 +70,7 @@ ALTER TABLE `2020_reviews`
 -- AUTO_INCREMENT for table `2020_reviews`
 --
 ALTER TABLE `2020_reviews`
-  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables

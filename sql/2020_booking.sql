@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2020 at 01:39 AM
+-- Generation Time: Mar 24, 2020 at 05:57 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -40,7 +40,8 @@ CREATE TABLE `2020_booking` (
 
 INSERT INTO `2020_booking` (`bid`, `bmemberid`, `beventid`) VALUES
 (16, 1001, 108),
-(17, 1001, 107);
+(17, 1001, 107),
+(19, 1001, 100);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +62,7 @@ ALTER TABLE `2020_booking`
 -- AUTO_INCREMENT for table `2020_booking`
 --
 ALTER TABLE `2020_booking`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables

@@ -10,7 +10,7 @@ if (isset($_SESSION['ADid_40245529'])) {
     $admin = $_SESSION['ADid_40245529'];
 }
 
-$readquery = "SELECT * FROM 2020_member "; 
+$readquery = "SELECT * FROM 2020_member ";
 
 $readresult = $conn->query($readquery);
 
@@ -21,27 +21,43 @@ if (!$readresult) {
 ?>
 
 <html>
-    <head>
-    <p>Home Page  <a href ="index.php">User Details</a>  <a href ="">Review Checking </a><br>  </p>
-    
+<?php
+include("../layouts/admin/head.php")
+?>
+
+<body>
     <?php
-    while ($rowread = $readresult->fetch_assoc()) {
-        
-        $adrowid = $rowread['mid'];
-        $admfirstname = $rowread['mfirstname'];
-        $admlastname = $rowread['mlastname'];
-        $admemail = $rowread['memail'];
-        $admpass = $rowread['mpass'];
-        
-        echo"<p>ID: $adrowid </p> ";
-        echo"<p>Name: $admlastname $admfirstname </p> ";
-        echo"<p>Email: $admemail </p>";
-        echo"<p>Password: $admpass </p>";
-        
-        echo"<a href='addelete.php?deletemember=$adrowid'>Delete</a><br>";
-        echo"<a href='adresetpass.php?resetmember=$adrowid'>Reset Password</a>";
-    }
+    include("../admin/components/navbar.php")
     ?>
-    
-    </head>
+    <div class="container">
+        <div class="row justify-content-center">
+            <?php
+            while ($rowread = $readresult->fetch_assoc()) {
+                $adrowid = $rowread['mid'];
+                $admfirstname = $rowread['mfirstname'];
+                $admlastname = $rowread['mlastname'];
+                $admemail = $rowread['memail'];
+                $admpass = $rowread['mpass']; ?>
+                <div class="col-4 p-3">
+                    <div class="card rounded border-primary m-3">
+                        <div class="card-body">
+                            <div><b class="text-primary">ID:</b> <?php echo $adrowid; ?> </div>
+                            <div><b class="text-primary">Name:</b> <?php echo $admlastname . " " . $admfirstname; ?> </div>
+                            <div><b class="text-primary">Email:</b> <?php echo $admemail; ?> </div>
+                            <div><b class="text-primary">Password:</b> <?php echo $admpass; ?> </div>
+                        </div>
+                        <div class="btn btn-danger rounded-0"><a class="text-light" href='addelete.php?deletemember=<?php echo $adrowid; ?>'>Delete this account</a></div>
+                        <div class="btn btn-primary rounded-0"><a class="text-light" href='adresetpass.php?resetmember=<?php echo $adrowid; ?>'>Reset Password</a></div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+    <?php
+    include("../layouts/admin/bodyjs.php")
+    ?>
+</body>
+
 </html>

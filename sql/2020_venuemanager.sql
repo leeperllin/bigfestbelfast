@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2020 at 02:04 AM
+-- Generation Time: Mar 24, 2020 at 05:57 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -41,7 +41,7 @@ CREATE TABLE `2020_venuemanager` (
 INSERT INTO `2020_venuemanager` (`vmid`, `vmname`, `vmpass`) VALUES
 (101, 'leeperllin', 'happy3029'),
 (102, 'Des', '123456'),
-(103, 'Perl', 'happy3029');
+(103, 'Perl', '000000');
 
 --
 -- Indexes for dumped tables

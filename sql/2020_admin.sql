@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2020 at 02:04 AM
+-- Generation Time: Mar 24, 2020 at 05:57 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -29,16 +29,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `2020_admin` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `adid` int(11) NOT NULL,
+  `adname` varchar(255) NOT NULL,
+  `adpass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `2020_admin`
 --
 
-INSERT INTO `2020_admin` (`id`, `username`, `password`) VALUES
+INSERT INTO `2020_admin` (`adid`, `adname`, `adpass`) VALUES
 (1, 'leeperllin', 'happy3029'),
 (2, 'desmondsim', '123456');
 
@@ -50,7 +50,7 @@ INSERT INTO `2020_admin` (`id`, `username`, `password`) VALUES
 -- Indexes for table `2020_admin`
 --
 ALTER TABLE `2020_admin`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`adid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -60,7 +60,7 @@ ALTER TABLE `2020_admin`
 -- AUTO_INCREMENT for table `2020_admin`
 --
 ALTER TABLE `2020_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `adid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

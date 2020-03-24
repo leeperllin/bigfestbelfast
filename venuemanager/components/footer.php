@@ -8,12 +8,12 @@
                     </div>
                 </div>
                 <div class="col-1">
-                    <a class="text-light" href="https://www.facebook.com/perllin">
+                    <a class="text-light" href="https://www.facebook.com/perllin" target="_blank">
                         <div class="p-2"> <i class="fa fa-facebook-official" style="font-size:24px"></i></div>
                     </a>
                 </div>
                 <div class="col-1">
-                    <a class=" text-light" href="https://www.instagram.com/leeperllin/">
+                    <a class=" text-light" href="https://www.instagram.com/leeperllin/" target="_blank">
                         <div class="p-2"> <i class="fa fa-instagram" style="font-size:24px"></i></div>
                     </a>
                 </div>

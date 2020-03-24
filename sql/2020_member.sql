@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 22, 2020 at 03:10 PM
+-- Generation Time: Mar 24, 2020 at 05:57 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -44,13 +44,8 @@ CREATE TABLE `2020_member` (
 
 INSERT INTO `2020_member` (`mid`, `mfirstname`, `mlastname`, `memail`, `mpass`, `mquestion`, `manswer`) VALUES
 (1001, 'Perl Lin ', 'Lee', 'leeperllin3029@hotmail.com', 'happy3029', 'What is your dog name?', 'Lucky'),
-(1002, 'Li', 'Qin', 'liqin3029@hotmail.com', '123456', 'What were the last four digits of your telephone number?', '0000'),
-(1003, 'Desmond', 'Sim', 'desmondsim@gmail.com', '123456', 'What primary school did you attend?', 'Queens Belfast'),
-(1010, 'Perl Lin', 'Lee', 'leeperllin1999@hotmail.com', '1234567', 'What is your dog name?', 'pussy'),
-(1011, 'Xinrou', 'Lee', 'leexinrou56@gmail.com', '19904201994412', 'What were the last four digits of your telephone number?', '1313'),
-(1012, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', '01010101', 'What is your dog name?', 'Pussy'),
-(1013, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', '12345', 'What is your dog name?', 'Pussy'),
-(1014, 'Perl Lin', 'Lee', 'leeperllin3029@hotmail.com', '12345', 'What is your dog name?', 'Pussy');
+(1002, 'Li', 'Qin', 'liqin3029@hotmail.com', '000000', 'What were the last four digits of your telephone number?', '0000'),
+(1003, 'Desmond', 'Sim', 'desmondsim@gmail.com', '123456', 'What primary school did you attend?', 'Queens Belfast');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +65,7 @@ ALTER TABLE `2020_member`
 -- AUTO_INCREMENT for table `2020_member`
 --
 ALTER TABLE `2020_member`
-  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1015;
+  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1016;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
