@@ -3,14 +3,18 @@ session_start();
 include("../showerrors.php");
 include("../conn.php");
 //call event information
-$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.eaddress, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
-              2020_eventcat.etname, 2020_venuemanager.vmname FROM 2020_event
+$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+              2020_eventcat.etname, 2020_venuemanager.vmname, 2020_venuecat.vname, 2020_venuecat.vid, 2020_venuecat.vaddress FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
               2020_event.ecatid= 2020_eventcat.etid
+              INNER JOIN 2020_venuecat
+              ON
+              2020_venuecat.vid = 2020_event.evenueid
               INNER JOIN 2020_venuemanager
               ON
-              2020_event.evmid= 2020_venuemanager.vmid";
+              2020_event.evmid= 2020_venuemanager.vmid
+              ";
               
 
 $readresult = $conn->query($readquery);
@@ -45,7 +49,7 @@ if (!$readresult) {
         echo"<a href='eventcategory.php?eventcategory=$catid'>$catname</a>";
     }
     ?>
-    <a href="#">Venue</a>
+    <a href="venuepage/index.php">Venue</a>
     <a href="supportpage/index.php">Support Us</a></p>
   
     
@@ -55,7 +59,7 @@ if (!$readresult) {
 
         $Eeventid = $rowread['eid'];
         $Eeventtitle = $rowread['etitle'];
-        $Eeventaddress = $rowread['eaddress'];
+        $Eeventaddress = $rowread['vaddress'];
         
         $Eeventdate = $rowread['edate'];
         $Eeventtime = $rowread['etime'];

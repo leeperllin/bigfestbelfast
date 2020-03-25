@@ -51,6 +51,7 @@ include("../layouts/venuemanager/head.php");
                 <?php
                 //help me built one more button to with value = 'NO' and it can go back to the previous page, if u know help me built    
                 while ($rowread = $readresult->fetch_assoc()) {
+
                     $deleteid = $rowread['eid'];
                     $deletitle = $rowread['etitle'];
                     $deleimage = $rowread['eimage'];
@@ -71,9 +72,13 @@ include("../layouts/venuemanager/head.php");
                     <button class="btn btn-secondary w-25" onclick="window.history.back()">No</button>
                 </div>
             </div>
+
         </div>
     </div>
-    <?php include("../venuemanager/components/footer.php") ?>
+
+    <?php
+    include("../venuemanager/components/footer.php")
+    ?>
     <?php
     include("../layouts/venuemanager/bodyjs.php");
     ?>

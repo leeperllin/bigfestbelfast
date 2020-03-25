@@ -11,11 +11,14 @@ if(isset($_SESSION['userid_40245529'])){
     $member = $_SESSION['userid_40245529']; 
 }
 
-$showbookingquery="SELECT 2020_booking.bid, 2020_event.eid, 2020_event.etitle, 2020_event.eaddress, 2020_event.edate, 2020_event.etime, 2020_event.eimage
+$showbookingquery="SELECT 2020_booking.bid, 2020_event.eid, 2020_event.etitle, 2020_event.edate, 2020_event.etime, 2020_event.eimage, 2020_venuecat.vaddress
               FROM 2020_event
               INNER JOIN 2020_booking
               ON
               2020_event.eid= 2020_booking.beventid
+              INNER JOIN 2020_venuecat
+              ON
+              2020_event.evenueid= 2020_venuecat.vid
               WHERE 2020_booking.bmemberid= $member ";
 
 $showbookingresult = $conn->query($showbookingquery);
@@ -37,7 +40,7 @@ if (!$showbookingresult) {
 
     $Bookingid = $rowread['bid'];
     $Eeventtitle = $rowread['etitle'];
-    $Eeventaddress = $rowread['eaddress'];
+    $Eeventaddress = $rowread['vaddress'];
     $Eeventdate = $rowread['edate'];
     $Eeventtime = $rowread['etime'];
     $Eeventimage = $rowread['eimage'];

@@ -39,7 +39,7 @@ include("../layouts/venuemanager/head.php");
 
 <body>
     <?php include("../venuemanager/components/navbar.php") ?>
-    <div id="vmDelete2Div" class="container">
+    <div class="container pb-5">
         <div class="d-flex text-align-center pt-3">
             <h1>Delete event </h1>
         </div>

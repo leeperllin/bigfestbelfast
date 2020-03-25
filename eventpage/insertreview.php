@@ -23,7 +23,8 @@ if(!$insert){
     echo $conn->error;
 }else{
     echo"<p> Thanks for submitting your review</p>";
-    header('refresh:1.5; url=eventdetails.php');
+    //header('refresh:1.5; url=eventdetails.php');
+    echo"<a href='index.php'>Back to event page</a>";
 }
 
 ?>

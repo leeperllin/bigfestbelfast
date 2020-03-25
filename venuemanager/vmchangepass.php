@@ -3,6 +3,9 @@ session_start();
 include("../showerrors.php");
 include("../conn.php");
 
+if (isset($_SESSION['VMname_40245529'])) {
+    $venuemanagername = $_SESSION['VMname_40245529'];
+}
 ?>
 <html>
 <?php
@@ -26,7 +29,7 @@ include("../layouts/venuemanager/head.php");
                             <input type='hidden' value='<?php echo $venuemanager ?>' name='venuemangerid' />
                             <div class="form-group">
                                 <label class="text-info"><b>ID Name:</b></label>
-                                <input class="form-control" type='text' name='vmidname' id='vmidname' required />
+                                <input class="form-control" type='text' value='<?php echo $venuemanagername ?> 'name='vmidname' id='vmidname' disabled/>
                             </div>
                             <div class="form-group">
                                 <label class="text-info"><b>Old Password:</b></label>

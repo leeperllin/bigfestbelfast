@@ -29,8 +29,11 @@ include("../layouts/admin/head.php")
     <?php
     include("../admin/components/navbar.php")
     ?>
+    <div class="d-flex justify-content-center">
+        <h1 class="display-4 text-primary p-2">User Details</h1>
+    </div>
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row ">
             <?php
             while ($rowread = $readresult->fetch_assoc()) {
                 $adrowid = $rowread['mid'];

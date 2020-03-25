@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include("../showerrors.php");
 include("../conn.php");
@@ -24,14 +23,18 @@ if (!$readresult) {
 
 while ($rowread = $readresult->fetch_assoc()) {
     $Beventid = $rowread['beventid'];
-}
 
     if ($Beventid !== $Ebookingid) {
+        
         $bookingquery = "INSERT INTO 2020_booking (beventid,bmemberid) VALUES ('$Ebookingid','$member')";
         $bookingresult = $conn->query($bookingquery);
+        
+        echo"$bookingquery";
         if (!$bookingresult) {
+            
             echo $conn->error;
         } else {
+            
             echo "Booking Sucessfully";
             echo"<a href='../index.php'>Back to Home Page </a>";
         }
@@ -40,6 +43,6 @@ while ($rowread = $readresult->fetch_assoc()) {
         echo "<a href='index.php'>Book other shows</a>";
     }
 
-
+}
 
 

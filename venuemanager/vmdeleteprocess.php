@@ -30,6 +30,7 @@ $deleteresult = $conn -> query($deletequery);
     <body>
         <?php
       echo "The event has been deleted successfully!";
+      echo"<a href='vmdelete.php'>Back to Delete Page</a>"
       
       //header('refresh:1; url=vmdelete.php');
         ?>

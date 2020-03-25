@@ -39,34 +39,36 @@ include("../layouts/venuemanager/head.php");
 
 <body>
     <?php include("../venuemanager/components/navbar.php") ?>
-    <div id="vmEdit2Div" class="container">
-        <div class="d-flex text-align-center pt-3">
-            <h1>Edit event</h1>
-        </div>
-        <div class="row">
-            <?php
-            while ($rowread = $readresult->fetch_assoc()) {
-                $Eventid = $rowread['eid'];
-                $Eventtitle = $rowread['etitle'];
-                $Eventimage = $rowread['eimage'];
-            ?>
-                <div class="col-4 p-3">
-                    <a class="text-info" href='vmedit3.php?eventid=<?php echo $Eventid ?>'>
-                        <div class="card border-info">
-                            <img class="card-img-top" src="../image/<?php echo $Eventimage ?>" alt="Card image cap" height="200px" width="200px">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-center align-items-center p-3">
-                                    <h3 class="card-text"><?php echo $Eventtitle ?></h3>
+    <!-- <div id="vmEdit2Div"> -->
+        <div class="container d-block">
+            <div class="d-flex text-align-center pt-3">
+                <h1>Edit event</h1>
+            </div>
+            <div class="row">
+                <?php
+                while ($rowread = $readresult->fetch_assoc()) {
+                    $Eventid = $rowread['eid'];
+                    $Eventtitle = $rowread['etitle'];
+                    $Eventimage = $rowread['eimage'];
+                ?>
+                    <div class="col-4 p-3">
+                        <a class="text-info" href='vmedit3.php?eventid=<?php echo $Eventid ?>'>
+                            <div class="card border-info">
+                                <img class="card-img-top" src="../image/<?php echo $Eventimage ?>" alt="Card image cap" height="200px" width="200px">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center align-items-center p-3">
+                                        <h3 class="card-text"><?php echo $Eventtitle ?></h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            <?php
-            }
-            ?>
+                        </a>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
         </div>
-    </div>
+    <!-- </div> -->
     <?php
     include("../venuemanager/components/footer.php")
     ?>

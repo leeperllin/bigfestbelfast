@@ -11,15 +11,18 @@ if (isset($_SESSION['VMid_40245529'])) {
 }
 
 
-$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.eaddress, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
-              2020_eventcat.etname, 2020_venuemanager.vmname FROM 2020_event
+$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+              2020_eventcat.etname, 2020_venuemanager.vmname, 2020_venuecat.vid, 2020_venuecat.vaddress FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
               2020_event.ecatid= 2020_eventcat.etid
+              INNER JOIN 2020_venuecat
+              ON
+              2020_venuecat.vid = 2020_event.evenueid
               INNER JOIN 2020_venuemanager
               ON
               2020_event.evmid= 2020_venuemanager.vmid
-              WHERE 2020_venuemanager.vmid = '$venuemanager'";
+              WHERE 2020_event.evmid='$venuemanager'";
 
 
 $readresult = $conn->query($readquery);
@@ -47,7 +50,7 @@ include("../layouts/venuemanager/head.php");
 
                 $eventid = $rowread['eid'];
                 $eventtitle = $rowread['etitle'];
-                $eventaddress = $rowread['eaddress'];
+                $eventaddress = $rowread['vaddress'];
                 $eventdes = $rowread['edes'];
                 $eventdate = $rowread['edate'];
                 $eventtime = $rowread['etime'];

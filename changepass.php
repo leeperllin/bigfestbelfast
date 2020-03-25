@@ -3,6 +3,9 @@ session_start();
 include("showerrors.php");
 include("conn.php");
 
+if(isset($_SESSION['username_40245529'])){   
+    $membername = $_SESSION['username_40245529']; 
+}
 ?>
 <html>
     <head>
@@ -16,7 +19,7 @@ include("conn.php");
     
        
     <label>Email: </label>
-    <input type='text' name='email' id='email' >
+    <input type='text' value='$membername' name='email' id='email' disabled />
     <br>
     
     <label>Old Password: </label>

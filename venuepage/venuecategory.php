@@ -5,14 +5,14 @@ include("../conn.php");
 
 $allvenuecat = $_GET['venuecat'];
 
-$readquery="SELECT 2020_event.eid, 2020_event.etitle, 2020_event.eaddress, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
-              2020_eventcat.etname, 2020_venuemanager.vmname, 2020_venuecat.vname FROM 2020_event
+$readquery="SELECT 2020_event.eid, 2020_event.etitle, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+              2020_eventcat.etname, 2020_venuemanager.vmname, 2020_venuecat.vname, 2020_venuecat.vid, 2020_venuecat.vaddress FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
               2020_event.ecatid= 2020_eventcat.etid
               INNER JOIN 2020_venuecat
               ON
-              2020_event.evenueid = 2020_venuecat.vid
+              2020_venuecat.vid = 2020_event.evenueid
               INNER JOIN 2020_venuemanager
               ON
               2020_event.evmid= 2020_venuemanager.vmid
@@ -60,7 +60,7 @@ if (!$readresult) {
 
         $Eeventid = $rowread['eid'];
         $Eeventtitle = $rowread['etitle'];
-        $Eeventaddress = $rowread['eaddress'];
+        $Eeventaddress = $rowread['vaddress'];
         
         $Eeventdate = $rowread['edate'];
         $Eeventtime = $rowread['etime'];
@@ -75,7 +75,7 @@ if (!$readresult) {
         echo"<p>Event Time: $Eeventtime </p> ";
         echo"<p>Event Category: $Eeventcategory </p> ";
         echo"<p>Event submited by: $Evenuemanagername manager </p> ";
-        echo"<a href='eventdetails.php?eventdetailsid=$Eeventid'>More Details</a><br>";
+        echo"<a href='../eventpage/eventdetails.php?eventdetailsid=$Eeventid'>More Details</a><br>";
     }
     ?>
     </body>

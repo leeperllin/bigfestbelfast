@@ -3,29 +3,33 @@ session_start();
 include("../showerrors.php");
 include("../conn.php");
 
-$readquery = "SELECT * FROM `2020_support`  ";
+$readquery1 = "SELECT * FROM `2020_support`  ";
 
-$readresult = $conn->query($readquery);
+$readresult1 = $conn->query($readquery1);
 
-if (!$readresult) {
+if (!$readresult1) {
     echo $conn->error;
 }
 ?>
 <html>
-    <head>
+<?php
+include("../layouts/head.php");
+?>
+
+<body>
+    <?php include("../components/secnavbar.php"); ?>
     <p>Support Page</p>
-        <?php
-        
-        while ($rowread = $readresult->fetch_assoc()) {
+    <?php
+    while ($rowread1 = $readresult1->fetch_assoc()) {
 
-        $rowid = $rowread['sid'];
-        $supportdes = $rowread['sdes'];
-        
+        $rowid = $rowread1['sid'];
+        $supportdes = $rowread1['sdes'];
+        echo "<p>$supportdes </p> ";
+    }
+    ?>
+    <?php
+    include("../layouts/bodyjs.php");
+    ?>
+</body>
 
-        echo"<p>$supportdes </p> ";
-        
-        }
-        ?>
-        
-    </head>
 </html>
