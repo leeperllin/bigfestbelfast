@@ -5,7 +5,7 @@ include("../conn.php");
 
 $allvenuecat = $_GET['venuecat'];
 
-$readquery="SELECT 2020_event.eid, 2020_event.etitle, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
+$readquery = "SELECT 2020_event.eid, 2020_event.etitle, 2020_event.edes, 2020_event.edate, 2020_event.etime, 2020_event.eimage,
               2020_eventcat.etname, 2020_venuemanager.vmname, 2020_venuecat.vname, 2020_venuecat.vid, 2020_venuecat.vaddress FROM 2020_event
               INNER JOIN 2020_eventcat
               ON
@@ -17,8 +17,8 @@ $readquery="SELECT 2020_event.eid, 2020_event.etitle, 2020_event.edes, 2020_even
               ON
               2020_event.evmid= 2020_venuemanager.vmid
               WHERE 2020_venuecat.vid = '$allvenuecat '";
-              
-                
+
+
 $readresult = $conn->query($readquery);
 
 if (!$readresult) {
@@ -28,55 +28,90 @@ if (!$readresult) {
 ?>
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-    <p>Hi world!
-    <a href="../index.php">Home</a>
-    <a href="../eventpage/index.php">All Event</a>
+<?php
+include("../layouts/sechead.php");
+?>
+
+<body>
+    <?php include("../components/secnavbar.php"); ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="venueCategoryTitle" class="m-3">Events in Category</h1>
+            </div>
+        </div>
+        <?php
+        //for showing all category in the All Event , do css with option select
+
+        $showoptionquery = "SELECT * FROM 2020_eventcat ORDER BY etname ";
+        $showoptionresult = $conn->query($showoptionquery);
+
+
+
+        while ($row = $showoptionresult->fetch_assoc()) {
+            $catname = $row['etname'];
+            $catid = $row['etid'];
+            // echo "<a href='../eventpage/eventcategory.php?eventcategory=$catid'>$catname</a>";
+        }
+        ?>
+
+
+
+        <?php
+        while ($rowread = $readresult->fetch_assoc()) {
+
+            $Eeventid = $rowread['eid'];
+            $Eeventtitle = $rowread['etitle'];
+            $Eeventaddress = $rowread['vaddress'];
+
+            $Eeventdate = $rowread['edate'];
+            $Eeventtime = $rowread['etime'];
+            $Eeventimage = $rowread['eimage'];
+            $Eeventcategory = $rowread['etname'];
+            $Evenuemanagername = $rowread['vmname']; ?>
+
+            <!-- echo "<img src='../image/$Eeventimage'<br>";
+        echo "<p>Event Title: $Eeventtitle </p> ";
+        echo "<p>Event Address: $Eeventaddress </p> ";
+        echo "<p>Event Date: $Eeventdate </p> ";
+        echo "<p>Event Time: $Eeventtime </p> ";
+        echo "<p>Event Category: $Eeventcategory </p> ";
+        echo "<p>Event submited by: $Evenuemanagername manager </p> ";
+        echo "<a href='../eventpage/eventdetails.php?eventdetailsid=$Eeventid'>More Details</a><br>"; -->
+            <div class="card bg-dark text-white m-3 ">
+                <img class="eventCategoryCardImage" src="../image/<?php echo $Eeventimage; ?>" alt="<?php echo $Eeventimage; ?>">
+                <div class="card-img-overlay ">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row d-flex h-100 justify-content-center align-items-center">
+                                <a class="text-light" href='eventdetails.php?eventdetailsid=<?php echo $Eeventid; ?>'>
+                                    <h1 class="m-0 eventCategoryCardTitle"><i><?php echo $Eeventtitle; ?></i></h1>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <h5 class="text-primary">Address: <i class="text-light"><?php echo $Eeventaddress; ?></i></h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="text-primary">Date: <i class="text-light"><?php echo $Eeventdate; ?></i></h5>
+                            </div>
+                            <div class="row">
+                                <h5 class="text-primary">Time: <i class="text-light"><?php echo $Eeventtime; ?></i></h5>
+                            </div>
+                            <div class="row"><a class="btn btn-primary" href='../eventpage/eventdetails.php?eventdetailsid=<?php echo $Eeventid; ?>'>More Details</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <?php
+        }
+        ?>
+    </div>
     <?php
-    //for showing all category in the All Event , do css with option select
-
-    $showoptionquery = "SELECT * FROM 2020_eventcat ORDER BY etname ";
-    $showoptionresult = $conn->query($showoptionquery);
-
-
-
-    while ($row = $showoptionresult->fetch_assoc()) {
-        $catname = $row['etname'];
-        $catid = $row['etid'];
-        echo"<a href='../eventpage/eventcategory.php?eventcategory=$catid'>$catname</a>";
-    }
+    include("../layouts/secbodyjs.php");
     ?>
-    <a href="index.php">Venue</a>
-    <a href="../supportpage/index.php">Support Us</a></p>
-  
-    
-    
-    <?php
-    while ($rowread = $readresult->fetch_assoc()) {
+</body>
 
-        $Eeventid = $rowread['eid'];
-        $Eeventtitle = $rowread['etitle'];
-        $Eeventaddress = $rowread['vaddress'];
-        
-        $Eeventdate = $rowread['edate'];
-        $Eeventtime = $rowread['etime'];
-        $Eeventimage = $rowread['eimage'];
-        $Eeventcategory = $rowread['etname'];
-        $Evenuemanagername = $rowread['vmname'];
-
-        echo"<img src='../image/$Eeventimage'<br>"; 
-        echo"<p>Event Title: $Eeventtitle </p> ";
-        echo"<p>Event Address: $Eeventaddress </p> ";
-        echo"<p>Event Date: $Eeventdate </p> ";
-        echo"<p>Event Time: $Eeventtime </p> ";
-        echo"<p>Event Category: $Eeventcategory </p> ";
-        echo"<p>Event submited by: $Evenuemanagername manager </p> ";
-        echo"<a href='../eventpage/eventdetails.php?eventdetailsid=$Eeventid'>More Details</a><br>";
-    }
-    ?>
-    </body>
 </html>

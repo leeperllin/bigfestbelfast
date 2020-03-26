@@ -17,11 +17,10 @@ if (isset($_SESSION['VMid_40245529'])) {
     ?>
 
     <body>
-        <div class="overflow-auto h-100">
             <?php
             include("../venuemanager/components/navbar.php")
             ?>
-            <div id="vmUploadForm">
+            <div id="vmUploadForm" class="p-2">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div id="vmUploadFormPaper" class="m-3">
                         <div class="d-flex justify-content-center text-center pt-3">
@@ -97,12 +96,8 @@ if (isset($_SESSION['VMid_40245529'])) {
                 </div>
             </div>
             <?php
-            include("../venuemanager/components/footer.php")
-            ?>
-            <?php
             include("../layouts/venuemanager/bodyjs.php");
             ?>
-        </div>
     </body>
 
 </html>

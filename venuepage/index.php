@@ -13,7 +13,7 @@ if (!$readresult1) {
 ?>
 <html>
 <?php
-include("../layouts/head.php");
+include("../layouts/sechead.php");
 ?>
 
 <body>
@@ -25,9 +25,11 @@ include("../layouts/head.php");
             $Venueid = $rowread1['vid'];
             $Eeventvenue = $rowread1['vname'];
         ?>
-            <div class="card">
+            <div class="card m-3">
                 <div class="card-body">
-                    <?php echo $Eeventvenue; ?> <a href='venuecategory.php?venuecat=<?php echo $Venueid; ?>'> More Show </a> <br>
+                    <div class="d-flex justify-content-between">
+                        <h4><?php echo $Eeventvenue; ?></h4> <a class="btn btn-primary" href='venuecategory.php?venuecat=<?php echo $Venueid; ?>'> More Show </a>
+                    </div>
                 </div>
             </div>
 
@@ -37,7 +39,7 @@ include("../layouts/head.php");
     </div>
 
     <?php
-    include("../layouts/bodyjs.php");
+    include("../layouts/secbodyjs.php");
     ?>
 </body>
 

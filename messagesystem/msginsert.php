@@ -27,9 +27,8 @@ $insert = $conn->query($insertreview);
 if(!$insert){
     echo $conn->error;
 }else{
-    echo"<p> Message Sent</p>";
-    
-    header("Location: messagebox.php?receiver=$Msgreceiver");
+  
+   header("Location: messagebox.php");
     
 }
 }

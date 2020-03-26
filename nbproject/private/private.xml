@@ -3,34 +3,73 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/addelete.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/messagesystem/msginsert.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmchangepass.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmchangepassprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/conn.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/eventcategory.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/register.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/components/navbar.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/adreviewcheck.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmaddeventcat.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/forgetpassprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/adresetpassprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmsignin.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmuploadprocess.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/changepass.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmdelete2.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/eventbooking.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/adreviewprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/meditdetailsprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/supportpage/index.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit2.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/components/secnavbar.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/mybooking.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmsigninprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/index.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/showerrors.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmaddeventcatprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/components/navbar.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/messagesystem/vmmsginsert.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuepage/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/mydetails.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/myreview.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/adresetpass.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/adsigninprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuepage/venuecategory.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/registerprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/addeleteprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/eventdetails.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/index.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/messagesystem/vmselectmsgmember.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmchangepassprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/adlogout.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/messagesystem/messagebox.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/meditdetailsform.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/mybookingcancel.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/register.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/mybookingdownload.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmdeleteprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/changepass.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmlogout.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/admin/adsignin.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/logout.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/myrevieweditprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/messagesystem/vmmessagebox.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmdelete.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit2.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmupload.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/signin.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/mydetails.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/signinprocess.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/myreviewdeleteprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmdelete3.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/insertreview.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/signinprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmedit3.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/myreviewedit.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/changepassprocess.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/components/navbar.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/vmeditprocess.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/registerprocess.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/venuemanager/index.php</file>
-            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/eventpage/eventdetails.php</file>
             <file>file:/Users/leeperllin/Desktop/bigfestbelfast/forgetpass.php</file>
+            <file>file:/Users/leeperllin/Desktop/bigfestbelfast/messagesystem/index.php</file>
         </group>
     </open-files>
 </project-private>

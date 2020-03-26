@@ -1,7 +1,7 @@
 <?php
-session_start();
-include("showerrors.php");
-include("conn.php");
+
+include("../showerrors.php");
+include("../conn.php");
 
 if (!isset($_SESSION['username_40245529'])) {
     header("Location: signin.php");

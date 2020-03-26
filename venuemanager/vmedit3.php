@@ -44,7 +44,6 @@ include("../layouts/venuemanager/head.php");
 
 <body>
     <?php include("../venuemanager/components/navbar.php") ?>
-    <div class="overflow-auto">
         <?php
         while ($row2 = $readresult->fetch_assoc()) {
             $valuetitle = $row2['etitle'];
@@ -134,11 +133,6 @@ include("../layouts/venuemanager/head.php");
             </div>
         </div>
         <!-- </div> -->
-
-        <?php
-        include("../venuemanager/components/footer.php")
-        ?>
-    </div>
     <?php
     include("../layouts/venuemanager/bodyjs.php");
     ?>

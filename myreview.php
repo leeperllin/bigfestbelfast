@@ -7,11 +7,11 @@ if (!isset($_SESSION['username_40245529'])) {
     header("Location: signin.php");
 }
 
-if(isset($_SESSION['userid_40245529'])){   
-    $member = $_SESSION['userid_40245529']; 
+if (isset($_SESSION['userid_40245529'])) {
+    $member = $_SESSION['userid_40245529'];
 }
 
-$checkreviewquery="SELECT 2020_reviews.rid, 2020_reviews.comment, 2020_event.etitle 
+$checkreviewquery = "SELECT 2020_reviews.rid, 2020_reviews.comment, 2020_event.etitle 
                    FROM 2020_event
                    INNER JOIN 2020_reviews
                    ON
@@ -27,27 +27,47 @@ if (!$checkreviewresult) {
 
 ?>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-         <?php
-    while ($rowread = $checkreviewresult->fetch_assoc()) {
+<?php
+include("layouts/head.php");
+?>
 
-    $Reviewid = $rowread['rid'];
-    $Eventtitle = $rowread['etitle'];
-    $Eventreview = $rowread['comment'];
-    
-    
-    
-    echo"<p>You had posted: $Eventreview in $Eventtitle Event ";
-    
-    echo"<a href='myreviewedit.php?editreview=$Reviewid'>Edit Review</a>";
-    
-    echo"<a href='myreviewdeleteprocess.php?deletereview=$Reviewid'>Delete Review</a>";
-    
-}
-        ?>
-    </body>
+<body>
+    <?php include("components/navbar.php") ?>
+    <?php include("components/sidenav.php") ?>
+    <div class="main">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center text-center pt-3">
+                <h1>My Review</h1>
+            </div>
+            <?php
+            while ($rowread = $checkreviewresult->fetch_assoc()) {
+
+                $Reviewid = $rowread['rid'];
+                $Eventtitle = $rowread['etitle'];
+                $Eventreview = $rowread['comment'];
+            ?>
+
+                <div class="card m-3">
+                    <div class="card-header bg-primary text-light">
+                        You had posted
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">in <i class="text-primary"><?php echo  $Eventtitle; ?></i> event</h5>
+                        <p class="card-text"><?php echo $Eventreview; ?></p>
+                        <div class="row">
+                            <a class="btn btn-primary m-1" href='myreviewedit.php?editreview=<?php echo $Reviewid; ?>'>Edit Review</a>
+                            <a class="btn btn-danger m-1" href='myreviewdeleteprocess.php?deletereview=<?php echo $Reviewid; ?>'>Delete Review</a>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+    <?php
+    include("layouts/bodyjs.php");
+    ?>
+</body>
+
 </html>

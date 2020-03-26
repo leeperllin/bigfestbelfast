@@ -38,6 +38,18 @@
 	z-index: 1;
 }
 
+.navbar {
+	height: 6%;
+}
+
+#navbarLogo {
+	font-family: 'Pacifico', cursive;
+}
+
+#secNavbarLogo {
+	font-family: 'Pacifico', cursive;
+}
+
 #signInForm {
 	/* background: #222 url('../../image/bgSample.jpg') center center no-repeat;
 	background-size: cover; */
@@ -79,5 +91,83 @@
 	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 10px;
 }
- 
 
+#supportPageBody {
+	background: #222
+		url('https://img.wallpapersafari.com/desktop/1920/1080/62/83/v3qT9H.jpg')
+		center center no-repeat;
+	background-size: cover;
+	overflow: auto;
+}
+
+#supportPagePaper {
+	background-color: rgba(000, 000, 000, 0.65);
+}
+
+#eventCategoryTitle {
+	font-family: 'Pacifico', cursive;
+}
+
+.eventCategoryCardImage {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	opacity: 0.3;
+}
+.eventCategoryCardTitle {
+	font-family: 'Rubik', sans-serif;
+}
+
+.eventDetailsImage {
+	width: 100%;
+	height: 40%;
+	object-fit: cover;
+}
+
+#venueCategoryTitle {
+	font-family: 'Pacifico', cursive;
+}
+
+.myBookingCardImage {
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+	opacity: 0.35;
+}
+
+.sidenav {
+	height: 94%;
+	width: 160px;
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	background-color: #ddd;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+.sidenav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 24px;
+	display: block;
+}
+
+.sidenav a:hover {
+	color: #000000;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+
+.main {
+	margin-left: 160px; /* Same as the width of the sidenav */
+	padding: 0px 10px;
+}

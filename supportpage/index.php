@@ -13,22 +13,32 @@ if (!$readresult1) {
 ?>
 <html>
 <?php
-include("../layouts/head.php");
+include("../layouts/sechead.php");
 ?>
 
-<body>
+<body id="supportPageBody">
     <?php include("../components/secnavbar.php"); ?>
-    <p>Support Page</p>
-    <?php
-    while ($rowread1 = $readresult1->fetch_assoc()) {
+    <div class="d-flex justify-content-center">
+        <div id="supportPagePaper" class="border rounded border-primary w-75 m-5">
+            <div class="d-flex justify-content-center text-light display-4 p-5">Support Us</div>
+            <div class="container">
+                <?php
+                while ($rowread1 = $readresult1->fetch_assoc()) {
 
-        $rowid = $rowread1['sid'];
-        $supportdes = $rowread1['sdes'];
-        echo "<p>$supportdes </p> ";
-    }
-    ?>
+                    $rowid = $rowread1['sid'];
+                    $supportdes = $rowread1['sdes'];
+                ?>
+                    <div class="row">
+                        <h5 class="text-light p-5"><?php echo $supportdes; ?></h5>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+    </div>
     <?php
-    include("../layouts/bodyjs.php");
+    include("../layouts/secbodyjs.php");
     ?>
 </body>
 

@@ -68,9 +68,6 @@ include("../layouts/venuemanager/head.php");
         </div>
     </div>
     <?php
-    include("../venuemanager/components/footer.php")
-    ?>
-    <?php
     include("../layouts/venuemanager/bodyjs.php");
     ?>
 </body>
