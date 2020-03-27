@@ -194,7 +194,7 @@ include("../layouts/sechead.php");
 
         </div>
     </div>
-
+    <?php include("../components/secfooter.php") ?>
     <?php
     include("../layouts/secbodyjs.php");
     ?>

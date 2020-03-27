@@ -16,11 +16,11 @@ include("layouts/head.php");
         </video>
         <div id="bgVideoContainer">
             <?php include("components/navbar.php"); ?>
-            <div class="container h-100">
+            <div class="container">
                 <div id="forgetPassForm">
                     <div>
-                        <div class="d-flex justify-content-center align-items-center h-100">
-                            <div id="forgetPassFormPaper">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div id="forgetPassFormPaper" class="m-1">
                                 <div class="d-flex justify-content-center text-center pt-3">
                                     <h1 class="text-primary pb-4">Forget Password</h1>
                                 </div>

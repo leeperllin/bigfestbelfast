@@ -43,15 +43,15 @@ while ($navrowread = $navreadresult->fetch_assoc()) {
                     <div class="pl-1">Home</div>
                 </a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light d-flex align-items-center" href="eventpage/index.php" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li id="navDropdown" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light d-flex align-items-center" href="eventpage/index.php" id="navbarDropdownMenuLink"  aria-haspopup="true" aria-expanded="false">
                     <svg class="bi bi-calendar" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd" />
                         <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
                     </svg>
                     <div class="pl-1">All Event</div>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div id="navDropdownMenu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <?php
                     $showoptionquery = "SELECT * FROM 2020_eventcat ORDER BY etname ";
                     $showoptionresult = $conn->query($showoptionquery);
@@ -91,7 +91,7 @@ while ($navrowread = $navreadresult->fetch_assoc()) {
                 </a>
                 <div id="navDropdownMenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="nav-link text-primary" href='mydetails.php?memberid=<?php echo $navrowid; ?>'>My Profile</a>
-                    <a class="nav-link text-primary" href='messagesystem/messagebox.php'>Inbox</a>
+                    <a class="nav-link text-primary" href='messagesystem/index.php'>Contact Venue Manager</a>
                     <a class="nav-link text-primary" href='changepass.php'>Change Password</a>
                     <a class="nav-link text-primary" href='logout.php'><svg class="bi bi-box-arrow-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M11.646 11.354a.5.5 0 010-.708L14.293 8l-2.647-2.646a.5.5 0 01.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708 0z" clip-rule="evenodd" />
@@ -107,3 +107,4 @@ while ($navrowread = $navreadresult->fetch_assoc()) {
         ?>
     </div>
 </nav>
+

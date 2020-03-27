@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 25, 2020 at 01:41 AM
+-- Generation Time: Mar 27, 2020 at 12:29 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `2020_message` (
   `msgid` int(11) NOT NULL,
   `sender` varchar(255) NOT NULL,
+  `sendername` varchar(255) NOT NULL,
   `receiver` varchar(255) NOT NULL,
   `msgcontent` longtext NOT NULL,
   `datetime` datetime NOT NULL
@@ -40,10 +41,10 @@ CREATE TABLE `2020_message` (
 -- Dumping data for table `2020_message`
 --
 
-INSERT INTO `2020_message` (`msgid`, `sender`, `receiver`, `msgcontent`, `datetime`) VALUES
-(4, '1001', '101', ' Hello bitch\r\n', '2020-03-25 00:05:00'),
-(5, '1001', '101', ' Hello dick', '2020-03-25 00:07:00'),
-(6, '1001', '101', ' Hello dick', '2020-03-25 00:27:00');
+INSERT INTO `2020_message` (`msgid`, `sender`, `sendername`, `receiver`, `msgcontent`, `datetime`) VALUES
+(46, '1001', 'leeperllin3029@hotmail.com', '102', ' Hello', '2020-03-26 20:39:00'),
+(47, '1001', 'leeperllin3029@hotmail.com', '102', ' hello', '2020-03-26 20:40:00'),
+(48, '1001', 'leeperllin3029@hotmail.com', '102', ' Hello fuker', '2020-03-26 20:47:00');
 
 --
 -- Indexes for dumped tables
@@ -53,7 +54,8 @@ INSERT INTO `2020_message` (`msgid`, `sender`, `receiver`, `msgcontent`, `dateti
 -- Indexes for table `2020_message`
 --
 ALTER TABLE `2020_message`
-  ADD PRIMARY KEY (`msgid`);
+  ADD PRIMARY KEY (`msgid`),
+  ADD KEY `sender` (`sender`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -63,7 +65,7 @@ ALTER TABLE `2020_message`
 -- AUTO_INCREMENT for table `2020_message`
 --
 ALTER TABLE `2020_message`
-  MODIFY `msgid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `msgid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -19,7 +19,7 @@ include("../layouts/sechead.php");
 <body>
     <?php include("../components/secnavbar.php"); ?>
     <div class="d-flex justify-content-center display-4 p-2">Venue</div>
-    <div class="container">
+    <div class="container p-3">
         <?php
         while ($rowread1 = $readresult1->fetch_assoc()) {
             $Venueid = $rowread1['vid'];
@@ -37,7 +37,7 @@ include("../layouts/sechead.php");
         }
         ?>
     </div>
-
+    <?php include("../components/secfooter.php") ?>
     <?php
     include("../layouts/secbodyjs.php");
     ?>

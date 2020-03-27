@@ -5,71 +5,57 @@ include("../conn.php");
 
 if (isset($_SESSION['VMid_40245529'])) {
     $venuemanager = $_SESSION['VMid_40245529'];
-} 
+}
 
-echo "$venuemanager";
+// echo "$venuemanager";
 
 //$messagemember= $_GET['sentoid'];
-$messagemember= $_GET['msgmid'];
+$messagemember = $_GET['msgmid'];
 
 
 ?>
 
 
-
-
 <?php
-$readquery = "SELECT * FROM 2020_message WHERE sender='$venuemanager' OR receiver='$venuemanager' AND 
-              sender='$messagemember' OR receiver='$messagemember' ";
+$readquery = "SELECT * FROM 2020_message WHERE receiver='$venuemanager' AND sender='$messagemember'";
+
 
 $readresult = $conn->query($readquery);
 
 if (!$readresult) {
     echo $conn->error;
-    
-}else{
-    while ($rowread = $readresult->fetch_assoc()) {
+} else { ?>
 
-    $isend = $rowread['sender'];
-    $ireceive = $rowread['receiver'];
-    $msgcontent = $rowread['msgcontent'];
-    
-    if($isend!==$venuemanager){
-        //show not me message with blue
-        echo"Member User: ";
-        echo"$msgcontent<br>";
-        
-    }else{
-        
-        echo"Me: ";
-        echo"$msgcontent<br>";
-        //show me message with white
-        
-        
-    }
-    
-  
-    
-}
-}
+    <html>
+    <?php
+    include("../layouts/venuemanager/head.php");
+    ?>
 
+    <body>
+        <?php include("../venuemanager/components/secnavbar.php") ?>
+        <div class="container justify-content-center">
+            <div class="d-flex justify-content-center p-5">
+                <h5 class="text-info">Inbox</h5>
+            </div>
+            <?php
+            while ($rowread = $readresult->fetch_assoc()) {
+                $isend = $rowread['sender'];
+                $isendname = $rowread['sendername'];
+                $msgcontent = $rowread['msgcontent'];
+
+                if ($isend !== $venuemanager) { ?>
+                    <p>Sent from <b class="text-primary"><?php echo $isendname; ?></b>: <b><?php echo $msgcontent; ?></b></p>
+
+
+            <?php
+                }
+            } ?>
+        </div>
+        <?php
+        include("../layouts/venuemanager/bodyjs.php");
+        ?>
+    </body>
+
+    </html>
+<?php }
 ?>
-
-<html>
-    <head>
-      <?php
-     
-    echo"<form action='vmmsginsert.php' method='POST'>
-        
-        <input type='hidden' value='$messagemember' name='msgreceiver' >
-        
-        <p>TO: <input type='text' name='msgto' value='$messagemember' disabled > </p>
-        
-        <textarea name='msgcontent' style='height:300px'> </textarea> 
-        
-        <input type='submit' value='Send Message' name='sendmessage'></form>";
-    
-   ?>
-        
-    </head>   
-</html>

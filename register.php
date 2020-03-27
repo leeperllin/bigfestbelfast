@@ -8,7 +8,7 @@ include("showerrors.php");
 include("layouts/head.php");
 ?>
 
-<body>
+<body style="overflow: auto">
     <div id="bgVideoDiv">
         <div id="bgVideoOverlay" class="overlay"></div>
         <video id="bgVideo" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -16,11 +16,11 @@ include("layouts/head.php");
         </video>
         <div id="bgVideoContainer">
             <?php include("components/navbar.php"); ?>
-            <div class="container h-100">
+            <div class="container">
                 <div id="registerForm">
                     <div>
-                        <div class="d-flex justify-content-center align-items-center h-100">
-                            <div id="registerFormPaper" class="mb-5">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div id="registerFormPaper" class="m-1">
                                 <div class="d-flex justify-content-center text-center">
                                     <h1 class="text-primary p-1">Create a new account</h1>
                                 </div>
