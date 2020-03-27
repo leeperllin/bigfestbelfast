@@ -36,7 +36,15 @@ include("../layouts/sechead.php");
 <body>
     <?php include("../components/secnavbar.php"); ?>
     <div class="container-fluid">
-        <div class="row"><div class="col-12"><h1 id="eventCategoryTitle" class="m-3">Category</h1></div></div>
+        <?php
+        $showoptionquery4 = "SELECT * FROM 2020_eventcat WHERE etid = $allcatevent ";
+        $showoptionresult4 = $conn->query($showoptionquery4);
+        while ($row4 = $showoptionresult4->fetch_assoc()) {
+            $navcatname4 = $row4['etname'];
+            $navcatid4 = $row4['etid'];
+        ?>
+            
+        <div class="row"><div class="col-12"><h1 id="eventCategoryTitle" class="m-3"><?php echo $navcatname4; ?></h1></div></div><?php } ?>
         <?php
         while ($rowread = $readresult->fetch_assoc()) {
 

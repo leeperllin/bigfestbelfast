@@ -61,10 +61,12 @@ if (!$Dbookingresult) {
     echo"<p>Event Date: $Eeventdate </p> ";
     echo"<p>Event Time: $Eeventtime </p> ";
     
-   
+    
     
 }
-        
-        ?>
+
+     ?>
+    
+    <input type="button" value="Print" onclick="window.print();"
     </body>
 </html>

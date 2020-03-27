@@ -27,12 +27,12 @@
                  <div class="input-group-prepend">
                      <span class="input-group-text" id="inputGroup-sizing-default">TO</span>
                  </div>
-                 <input type="text" class="form-control" placeholder='write to who' name='msgreceiver' aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                 <input type="text" class="form-control" placeholder='Insert Venue Manager ID' name='msgreceiver' aria-label="Default" aria-describedby="inputGroup-sizing-default">
              </div>
              <!-- <textarea class="rounded" name='msgcontent' style='height:300px'></textarea> -->
 
              <div class="form-group">
-                 <textarea class="form-control" name='msgcontent' id="exampleFormControlTextarea1" rows="5"></textarea>
+                 <textarea class="form-control" name='msgcontent' id="exampleFormControlTextarea1" placeholder='Type your message here.' rows="5"></textarea>
              </div>
              <div>
                  <input class="btn btn-primary" type='submit' value='Send Message' name='sendmessage'>
